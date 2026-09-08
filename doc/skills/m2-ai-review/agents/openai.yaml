@@ -1,0 +1,4 @@
+interface:
+  display_name: "M2 智能报销审核（AI 复核）"
+  short_description: "报销单合规审核、AI 复核与回写 ERP 工作流"
+  default_prompt: "Use $m2-ai-review to run and verify the M2 expense claim review (10 rules, invoice-image-first OCR, special approval exemption, AI second opinion with FLAG on disagreement) and write back review opinions."

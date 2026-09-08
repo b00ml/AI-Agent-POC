@@ -1,0 +1,40 @@
+[project]
+name = "qiheng-expense-audit"
+version = "2.0.0"
+description = "启衡精密AI财务提效POC - 智能报销审核系统"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "requests>=2.31",
+    "python-dotenv>=1.0",
+    "openai>=1.0",
+    "pydantic>=2.6.0",
+    "filelock>=3.13",
+    "langgraph>=1.2,<2",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0",
+    "ruff>=0.5",
+]
+
+[tool.setuptools.packages.find]
+include = ["core*", "backend*", "data*"]
+namespaces = true
+
+[tool.pytest.ini_options]
+testpaths = ["tests/unit"]
+addopts = "-q"
+
+[tool.ruff]
+line-length = 110
+target-version = "py310"
+extend-exclude = ["output", "frontend", "doc", "bank", "node_modules"]
+
+[tool.ruff.lint]
+# 保守默认集（pyflakes + 关键 pycodestyle）：不做大规模风格翻新，只拦真实问题
+# E402：main.py 先 load_dotenv 再导入、local_ocr 必须先设 paddle 环境变量——有意为之
+# E701/W293：存量风格与模板字符串内空行，不动运行时代码
+ignore = ["E402", "E701", "W293"]
+select = ["E4", "E7", "E9", "F", "W"]

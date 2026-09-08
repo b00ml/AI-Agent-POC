@@ -1,0 +1,4 @@
+interface:
+  display_name: "M3 发票异常 AI 复核（Skill 驱动）"
+  short_description: "对发票异常逐条 AI 复核（确认/存疑/误报），附理由与置信度"
+  default_prompt: "Use $m3-ai-review to run the M3 anomaly AI review: independently judge each rule-flagged invoice anomaly against the policy KB and output CONFIRM/DOUBT/FALSE_ALARM with reasons and confidence."

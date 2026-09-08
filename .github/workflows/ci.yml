@@ -1,0 +1,49 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  quality:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+
+      - name: 安装依赖
+        run: |
+          python -m pip install --upgrade pip
+          pip install ruff pytest
+          pip install -r requirements.txt -r requirements-paddle.txt -r backend/requirements.txt
+
+      - name: Lint（ruff，全仓；pyproject 已排除 output/frontend/doc/bank）
+        run: ruff check .
+
+      - name: 单元测试（pytest，规则引擎/限流器/检索/契约/调查Agent/工作流）
+        run: python -m pytest
+
+      - name: 前端构建
+        working-directory: frontend
+        run: |
+          npm ci
+          npm run build
+
+      - name: 制度知识库检索评测（keyword 基线；hybrid 需本地模型权重，不进 CI）
+        run: python tools/eval_retrieval.py --mode keyword
+
+      - name: 自建困难集评测（离线合成固件门禁）
+        run: python tools/eval_hard_set.py --gate
+
+      - name: 注入鲁棒性评测
+        run: python tools/eval_injection.py
+
+      - name: Prompt 回归（快照比对）
+        run: python tools/prompt_regression.py
+
+      # 说明：python main.py evaluate --gate 依赖本地 ERP 与 OCR 缓存，
+      # 属于自托管验收步骤（见 README「评测与提交」），不放进 CI。

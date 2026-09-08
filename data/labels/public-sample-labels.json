@@ -1,0 +1,268 @@
+{
+  "meta": {
+    "description": "公开样例集标注：30 单报销的标准审核结论，供你自建评测集使用",
+    "note": "正式评分使用另外 270 单隐藏评分集，其标注不会发放。请勿针对本样例集过拟合。",
+    "violationLabels": {
+      "OVER_STANDARD_HOTEL": "住宿费超标",
+      "OVER_STANDARD_MEAL": "伙食补助超标",
+      "OVER_STANDARD_CITY_TRANSPORT": "市内交通补助超标",
+      "OVER_STANDARD_TRANSPORT_CLASS": "长途交通舱位超标",
+      "INVOICE_TITLE_MISMATCH": "发票抬头与公司名称不符",
+      "INVOICE_TAXNO_MISMATCH": "发票税号与公司税号不符",
+      "DUPLICATE_INVOICE": "同一发票重复报销",
+      "MISSING_APPROVAL_OVERTIME_TAXI": "加班打车费缺少事前审批",
+      "MISSING_ATTACHMENT": "缺少票据附件",
+      "AMOUNT_MISMATCH": "报销金额与票面金额不符"
+    }
+  },
+  "claims": {
+    "BX-005699": {
+      "claimNo": "BX202606-5699",
+      "expectedVerdict": "REJECT",
+      "violations": [
+        "OVER_STANDARD_MEAL"
+      ],
+      "details": [
+        "STAFF 伙食补助标准 70 元/天，实报 116 元/天"
+      ]
+    },
+    "BX-005726": {
+      "claimNo": "BX202606-5726",
+      "expectedVerdict": "APPROVE",
+      "violations": [],
+      "details": []
+    },
+    "BX-005740": {
+      "claimNo": "BX202606-5740",
+      "expectedVerdict": "APPROVE",
+      "violations": [],
+      "details": []
+    },
+    "BX-005741": {
+      "claimNo": "BX202606-5741",
+      "expectedVerdict": "REJECT",
+      "violations": [
+        "OVER_STANDARD_TRANSPORT_CLASS"
+      ],
+      "details": [
+        "STAFF 长途交通标准为 高铁二等座，实报 高铁商务座"
+      ]
+    },
+    "BX-005745": {
+      "claimNo": "BX202606-5745",
+      "expectedVerdict": "REJECT",
+      "violations": [
+        "MISSING_ATTACHMENT"
+      ],
+      "details": [
+        "该费用行未上传票据附件"
+      ]
+    },
+    "BX-005759": {
+      "claimNo": "BX202606-5759",
+      "expectedVerdict": "REJECT",
+      "violations": [
+        "DUPLICATE_INVOICE"
+      ],
+      "details": [
+        "发票 933408996752/35034898 已在历史报销中使用过"
+      ]
+    },
+    "BX-005767": {
+      "claimNo": "BX202606-5767",
+      "expectedVerdict": "REJECT",
+      "violations": [
+        "OVER_STANDARD_HOTEL"
+      ],
+      "details": [
+        "MANAGER 在 上海（TIER1）住宿标准 700 元/晚，实报 967 元/晚"
+      ]
+    },
+    "BX-005769": {
+      "claimNo": "BX202606-5769",
+      "expectedVerdict": "APPROVE",
+      "violations": [],
+      "details": []
+    },
+    "BX-005773": {
+      "claimNo": "BX202606-5773",
+      "expectedVerdict": "REJECT",
+      "violations": [
+        "INVOICE_TITLE_MISMATCH"
+      ],
+      "details": [
+        "发票 922437022240/13703760 抬头为「启衡精密」，与公司名称「启衡精密制造有限公司」不符"
+      ]
+    },
+    "BX-005785": {
+      "claimNo": "BX202606-5785",
+      "expectedVerdict": "APPROVE",
+      "violations": [],
+      "details": []
+    },
+    "BX-005790": {
+      "claimNo": "BX202606-5790",
+      "expectedVerdict": "APPROVE",
+      "violations": [],
+      "details": []
+    },
+    "BX-005792": {
+      "claimNo": "BX202606-5792",
+      "expectedVerdict": "APPROVE",
+      "violations": [],
+      "details": []
+    },
+    "BX-005805": {
+      "claimNo": "BX202606-5805",
+      "expectedVerdict": "APPROVE",
+      "violations": [],
+      "details": []
+    },
+    "BX-005820": {
+      "claimNo": "BX202606-5820",
+      "expectedVerdict": "APPROVE",
+      "violations": [],
+      "details": []
+    },
+    "BX-005826": {
+      "claimNo": "BX202606-5826",
+      "expectedVerdict": "REJECT",
+      "violations": [
+        "INVOICE_TAXNO_MISMATCH"
+      ],
+      "details": [
+        "发票 942362889896/07732700 票面购方税号为「91320594JA1TXXXX7Q」，与公司税号不符（系统记录与票面不一致，以票面为准）"
+      ]
+    },
+    "BX-005834": {
+      "claimNo": "BX202606-5834",
+      "expectedVerdict": "REJECT",
+      "violations": [
+        "OVER_STANDARD_HOTEL"
+      ],
+      "details": [
+        "STAFF 在 重庆（TIER2）住宿标准 420 元/晚，实报 500 元/晚"
+      ]
+    },
+    "BX-005846": {
+      "claimNo": "BX202606-5846",
+      "expectedVerdict": "APPROVE",
+      "violations": [],
+      "details": []
+    },
+    "BX-005857": {
+      "claimNo": "BX202606-5857",
+      "expectedVerdict": "REJECT",
+      "violations": [
+        "OVER_STANDARD_CITY_TRANSPORT"
+      ],
+      "details": [
+        "市内交通补助标准 30 元/天 × 3 天 = 90 元，实报 159 元"
+      ]
+    },
+    "BX-005861": {
+      "claimNo": "BX202606-5861",
+      "expectedVerdict": "APPROVE",
+      "violations": [],
+      "details": []
+    },
+    "BX-005866": {
+      "claimNo": "BX202606-5866",
+      "expectedVerdict": "REJECT",
+      "violations": [
+        "MISSING_APPROVAL_OVERTIME_TAXI"
+      ],
+      "details": [
+        "制度 v3.2 第 4.3 条要求加班打车须事前审批，本单无审批记录"
+      ]
+    },
+    "BX-005880": {
+      "claimNo": "BX202606-5880",
+      "expectedVerdict": "APPROVE",
+      "violations": [],
+      "details": []
+    },
+    "BX-005893": {
+      "claimNo": "BX202606-5893",
+      "expectedVerdict": "REJECT",
+      "violations": [
+        "AMOUNT_MISMATCH"
+      ],
+      "details": [
+        "报销金额 1475.00 元，票面金额 1088.00 元"
+      ]
+    },
+    "BX-005911": {
+      "claimNo": "BX202606-5911",
+      "expectedVerdict": "REJECT",
+      "violations": [
+        "INVOICE_TITLE_MISMATCH"
+      ],
+      "details": [
+        "发票 917430632740/70701089 抬头为「苏州启衡精密制造有限公司」，与公司名称「启衡精密制造有限公司」不符"
+      ]
+    },
+    "BX-005916": {
+      "claimNo": "BX202606-5916",
+      "expectedVerdict": "REJECT",
+      "violations": [
+        "OVER_STANDARD_MEAL"
+      ],
+      "details": [
+        "STAFF 伙食补助标准 100 元/天，实报 165 元/天"
+      ]
+    },
+    "BX-005918": {
+      "claimNo": "BX202606-5918",
+      "expectedVerdict": "APPROVE",
+      "violations": [],
+      "details": []
+    },
+    "BX-005922": {
+      "claimNo": "BX202606-5922",
+      "expectedVerdict": "REJECT",
+      "violations": [
+        "INVOICE_TAXNO_MISMATCH"
+      ],
+      "details": [
+        "发票 972347555350/27451408 购方税号为「91320594M71TXXXX7Q」，与公司税号「91320594MA1TXXXX7Q」不符"
+      ]
+    },
+    "BX-005952": {
+      "claimNo": "BX202606-5952",
+      "expectedVerdict": "REJECT",
+      "violations": [
+        "MISSING_APPROVAL_OVERTIME_TAXI"
+      ],
+      "details": [
+        "制度 v3.2 第 4.3 条要求加班打车须事前审批，本单无审批记录"
+      ]
+    },
+    "BX-005957": {
+      "claimNo": "BX202606-5957",
+      "expectedVerdict": "APPROVE",
+      "violations": [],
+      "details": []
+    },
+    "BX-005962": {
+      "claimNo": "BX202606-5962",
+      "expectedVerdict": "REJECT",
+      "violations": [
+        "DUPLICATE_INVOICE"
+      ],
+      "details": [
+        "发票 995578032022/24646291 已在历史报销中使用过"
+      ]
+    },
+    "BX-005967": {
+      "claimNo": "BX202606-5967",
+      "expectedVerdict": "REJECT",
+      "violations": [
+        "INVOICE_TAXNO_MISMATCH"
+      ],
+      "details": [
+        "发票 923731537131/19098348 票面购方税号为「91320594WA1TXXXX7Q」，与公司税号不符（系统记录与票面不一致，以票面为准）"
+      ]
+    }
+  }
+}

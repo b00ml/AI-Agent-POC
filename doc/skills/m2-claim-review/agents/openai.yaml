@@ -1,0 +1,4 @@
+interface:
+  display_name: "M2 报销单 AI 复核（Skill 驱动）"
+  short_description: "对报销单独立AI复核（通过/驳回/存疑），附违规代码与理由"
+  default_prompt: "Use $m2-claim-review to run the M2 claim AI review: independently judge each claim against travel standards, approvals, OCR fields and the policy KB, output APPROVE/REJECT/FLAG with violation codes, reasons and confidence, and flag disagreements with the rules engine."

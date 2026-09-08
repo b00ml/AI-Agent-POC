@@ -1,0 +1,4 @@
+interface:
+  display_name: "M3 发票异常审核"
+  short_description: "发票台账全量稽核、异常判定（重复/抬头/税号/税率）与 AI 复核工作流"
+  default_prompt: "Use $m3-invoice-audit to run and verify the M3 invoice anomaly audit (duplicates, title/taxno/rate issues) with judgment basis and AI review."

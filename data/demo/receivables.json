@@ -1,0 +1,5 @@
+[
+  {"id":"DEMO-AR-001","customerName":"示例客户甲有限公司","status":"OPEN","outstandingFen":120000},
+  {"id":"DEMO-AR-002","customerName":"示例客户乙有限公司","status":"OPEN","outstandingFen":88000},
+  {"id":"DEMO-AR-003","customerName":"示例客户丙有限公司","status":"OVERDUE","outstandingFen":45000}
+]

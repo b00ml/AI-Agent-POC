@@ -1,0 +1,10 @@
+# 核心依赖（本地 PaddleOCR 之外的必需项）
+requests>=2.31
+python-dotenv>=1.0
+openai>=1.0
+streamlit>=1.28
+pandas>=2.0
+openpyxl>=3.1
+numpy>=1.24
+setuptools>=68.0
+langgraph>=1.2,<2

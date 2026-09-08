@@ -1,0 +1,34 @@
+services:
+  qiheng-api:
+    build:
+      context: .
+      dockerfile: backend/Dockerfile.demo
+    image: qiheng-api:demo
+    environment:
+      DEMO_MODE: "1"
+      QIHENG_BASE_URL: demo://local
+      QIHENG_BANK_DIR: /app/data/demo
+      OCR_ENGINE: fixture
+      LLM_REVIEW_ENABLED: "0"
+    ports:
+      - "8000:8000"
+    volumes:
+      - demo_output:/app/output
+    restart: unless-stopped
+
+  qiheng-web:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+      args:
+        VITE_DEMO_MODE: "1"
+    image: qiheng-web:demo
+    ports:
+      - "5173:80"
+    depends_on:
+      qiheng-api:
+        condition: service_healthy
+    restart: unless-stopped
+
+volumes:
+  demo_output:

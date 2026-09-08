@@ -1,0 +1,57 @@
+services:
+  # 主界面：Vue3 + FastAPI（用户指定架构）
+  qiheng-web:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    image: qiheng-web:1.0
+    container_name: qiheng-web
+    ports:
+      - "5173:80"
+    depends_on:
+      qiheng-api:
+        condition: service_healthy
+    restart: unless-stopped
+
+  qiheng-api:
+    build:
+      context: .
+      dockerfile: backend/Dockerfile
+    image: qiheng-api:1.0
+    container_name: qiheng-api
+    ports:
+      - "8000:8000"
+    env_file:
+      - .env
+    environment:
+      - QIHENG_BASE_URL=http://host.docker.internal:8081
+      - OCR_ENGINE=paddle
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    volumes:
+      - ./output:/app/output
+      - ./data:/app/data
+      - ./bank:/app/bank
+    restart: unless-stopped
+
+  # 运维工具：Streamlit 一键审核（可选，与主界面并存）
+  qiheng-audit:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: qiheng-audit:1.0
+    container_name: qiheng-audit
+    ports:
+      - "8501:8501"
+    env_file:
+      - .env
+    environment:
+      - QIHENG_BASE_URL=http://host.docker.internal:8081
+      - OCR_ENGINE=paddle
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    volumes:
+      - ./output:/app/output
+      - ./data:/app/data
+      - ./bank:/app/bank
+    restart: unless-stopped

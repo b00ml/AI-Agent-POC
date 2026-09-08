@@ -1,0 +1,206 @@
+[
+  {
+    "id": "DEMO-0001",
+    "claimNo": "DEMO-2026-0001",
+    "status": "PENDING",
+    "employeeId": "demo-e001",
+    "employeeName": "测试员工甲",
+    "departmentName": "研发部",
+    "jobLevel": "STAFF",
+    "claimType": "TRAVEL",
+    "title": "上海出差住宿",
+    "trip": {"city": "上海", "nights": 2},
+    "lines": [
+      {
+        "lineNo": 1,
+        "expenseType": "HOTEL",
+        "amountFen": 70000,
+        "description": "上海出差住宿",
+        "invoice": {
+          "id": "demo-inv-001",
+          "type": "EXPENSE",
+          "invoiceCode": "DEMO-CODE-001",
+          "invoiceNo": "DEMO-NO-001",
+          "invoiceKind": "HOTEL",
+          "issuedOn": "2026-06-01",
+          "buyer": {"name": "示例制造有限公司", "taxNo": "91320594MA1TEST001"},
+          "seller": {"name": "示例酒店有限公司", "taxNo": "91400000MA1DEMO001"},
+          "taxRate": 0.06,
+          "totalFen": 70000
+        },
+        "attachment": {"id": "demo-att-001", "mimeType": "image/jpeg", "migrated": true}
+      }
+    ],
+    "approvals": []
+  },
+  {
+    "id": "DEMO-0002",
+    "claimNo": "DEMO-2026-0002",
+    "status": "PENDING",
+    "employeeId": "demo-e002",
+    "employeeName": "测试员工乙",
+    "departmentName": "销售部",
+    "jobLevel": "STAFF",
+    "claimType": "TRAVEL",
+    "title": "北京出差伙食",
+    "trip": {"city": "北京", "nights": 2},
+    "lines": [
+      {
+        "lineNo": 1,
+        "expenseType": "MEAL",
+        "amountFen": 23000,
+        "description": "北京出差伙食补助",
+        "invoice": {
+          "id": "demo-inv-002",
+          "type": "EXPENSE",
+          "invoiceCode": "DEMO-CODE-002",
+          "invoiceNo": "DEMO-NO-002",
+          "invoiceKind": "HOTEL",
+          "issuedOn": "2026-06-02",
+          "buyer": {"name": "示例制造有限公司分公司", "taxNo": "91320594MA1TEST001"},
+          "seller": {"name": "示例餐饮有限公司", "taxNo": "91400000MA1DEMO002"},
+          "taxRate": 0.13,
+          "totalFen": 23000
+        },
+        "attachment": {"id": "demo-att-002", "mimeType": "image/jpeg", "migrated": true}
+      }
+    ],
+    "approvals": []
+  },
+  {
+    "id": "DEMO-0003",
+    "claimNo": "DEMO-2026-0003",
+    "status": "PENDING",
+    "employeeId": "demo-e003",
+    "employeeName": "测试员工丙",
+    "departmentName": "制造部",
+    "jobLevel": "STAFF",
+    "claimType": "TRAVEL",
+    "title": "未知城市交通",
+    "trip": {"city": "样例市", "nights": 1},
+    "lines": [
+      {
+        "lineNo": 1,
+        "expenseType": "CITY_TRANSPORT",
+        "amountFen": 1000,
+        "description": "市内交通",
+        "invoice": {
+          "id": "demo-inv-003",
+          "type": "EXPENSE",
+          "invoiceCode": "DEMO-CODE-003",
+          "invoiceNo": "DEMO-NO-003",
+          "invoiceKind": "TAXI",
+          "issuedOn": "2026-06-03",
+          "buyer": {"name": "示例制造有限公司", "taxNo": "91320594MA1TEST001"},
+          "seller": {"name": "示例出行有限公司", "taxNo": "91400000MA1DEMO003"},
+          "taxRate": 0.03,
+          "totalFen": 1000
+        },
+        "attachment": {"id": "demo-att-003", "mimeType": "image/jpeg", "migrated": true}
+      }
+    ],
+    "approvals": []
+  },
+  {
+    "id": "DEMO-0004",
+    "claimNo": "DEMO-2026-0004",
+    "status": "PENDING",
+    "employeeId": "demo-e004",
+    "employeeName": "测试员工丁",
+    "departmentName": "研发部",
+    "jobLevel": "STAFF",
+    "claimType": "TRAVEL",
+    "title": "上海出差高铁",
+    "trip": {"city": "上海", "nights": 1},
+    "lines": [
+      {
+        "lineNo": 1,
+        "expenseType": "LONG_TRANSPORT",
+        "amountFen": 12000,
+        "description": "高铁商务座",
+        "invoice": {
+          "id": "demo-inv-004",
+          "type": "EXPENSE",
+          "invoiceCode": "DEMO-CODE-004",
+          "invoiceNo": "DEMO-NO-004",
+          "invoiceKind": "TRAIN",
+          "issuedOn": "2026-06-04",
+          "buyer": {"name": "示例制造有限公司", "taxNo": "91320594MA1TEST001"},
+          "seller": {"name": "示例铁路客运", "taxNo": "91400000MA1DEMO004"},
+          "taxRate": 0.09,
+          "totalFen": 12000
+        },
+        "attachment": {"id": "demo-att-004", "mimeType": "image/jpeg", "migrated": true}
+      }
+    ],
+    "approvals": []
+  },
+  {
+    "id": "DEMO-0005",
+    "claimNo": "DEMO-2026-0005",
+    "status": "PENDING",
+    "employeeId": "demo-e005",
+    "employeeName": "测试员工戊",
+    "departmentName": "管理部",
+    "jobLevel": "STAFF",
+    "claimType": "DAILY",
+    "title": "办公打车补票",
+    "trip": {},
+    "lines": [
+      {
+        "lineNo": 1,
+        "expenseType": "TAXI",
+        "amountFen": 3600,
+        "description": "遗失票据情况说明",
+        "invoice": {
+          "id": "demo-inv-005",
+          "type": "EXPENSE",
+          "invoiceCode": "DEMO-CODE-005",
+          "invoiceNo": "DEMO-NO-005",
+          "invoiceKind": "TAXI",
+          "issuedOn": "2026-06-05",
+          "buyer": {"name": "示例制造有限公司", "taxNo": "91320594MA1TEST001"},
+          "seller": {"name": "示例出行有限公司", "taxNo": "91400000MA1DEMO005"},
+          "taxRate": 0.03,
+          "totalFen": 3600
+        },
+        "attachment": null
+      }
+    ],
+    "approvals": []
+  },
+  {
+    "id": "DEMO-0006",
+    "claimNo": "DEMO-2026-0006",
+    "status": "PENDING",
+    "employeeId": "demo-e006",
+    "employeeName": "测试员工己",
+    "departmentName": "研发部",
+    "jobLevel": "STAFF",
+    "claimType": "TRAVEL",
+    "title": "重复发票演示",
+    "trip": {"city": "上海", "nights": 1},
+    "lines": [
+      {
+        "lineNo": 1,
+        "expenseType": "HOTEL",
+        "amountFen": 35000,
+        "description": "重复发票演示",
+        "invoice": {
+          "id": "demo-inv-001-copy",
+          "type": "EXPENSE",
+          "invoiceCode": "DEMO-CODE-001",
+          "invoiceNo": "DEMO-NO-001",
+          "invoiceKind": "HOTEL",
+          "issuedOn": "2026-06-01",
+          "buyer": {"name": "示例制造有限公司", "taxNo": "91320594MA1TEST001"},
+          "seller": {"name": "示例酒店有限公司", "taxNo": "91400000MA1DEMO001"},
+          "taxRate": 0.06,
+          "totalFen": 35000
+        },
+        "attachment": {"id": "demo-att-006", "mimeType": "image/jpeg", "migrated": true}
+      }
+    ],
+    "approvals": []
+  }
+]

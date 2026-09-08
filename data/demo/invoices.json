@@ -1,0 +1,8 @@
+[
+  {"id":"demo-inv-001","type":"EXPENSE","invoiceCode":"DEMO-CODE-001","invoiceNo":"DEMO-NO-001","invoiceKind":"HOTEL","issuedOn":"2026-06-01","buyer":{"name":"示例制造有限公司","taxNo":"91320594MA1TEST001"},"seller":{"name":"示例酒店有限公司","taxNo":"91400000MA1DEMO001"},"taxRate":0.06,"totalFen":70000},
+  {"id":"demo-inv-001-copy","type":"EXPENSE","invoiceCode":"DEMO-CODE-001","invoiceNo":"DEMO-NO-001","invoiceKind":"HOTEL","issuedOn":"2026-06-01","buyer":{"name":"示例制造有限公司","taxNo":"91320594MA1TEST001"},"seller":{"name":"示例酒店有限公司","taxNo":"91400000MA1DEMO001"},"taxRate":0.06,"totalFen":35000},
+  {"id":"demo-inv-002","type":"EXPENSE","invoiceCode":"DEMO-CODE-002","invoiceNo":"DEMO-NO-002","invoiceKind":"HOTEL","issuedOn":"2026-06-02","buyer":{"name":"示例制造有限公司分公司","taxNo":"91320594MA1TEST001"},"seller":{"name":"示例餐饮有限公司","taxNo":"91400000MA1DEMO002"},"taxRate":0.13,"totalFen":23000},
+  {"id":"demo-inv-003","type":"EXPENSE","invoiceCode":"DEMO-CODE-003","invoiceNo":"DEMO-NO-003","invoiceKind":"TAXI","issuedOn":"2026-06-03","buyer":{"name":"示例制造有限公司","taxNo":"91320594MA1TEST001"},"seller":{"name":"示例出行有限公司","taxNo":"91400000MA1DEMO003"},"taxRate":0.03,"totalFen":1000},
+  {"id":"demo-inv-004","type":"EXPENSE","invoiceCode":"DEMO-CODE-004","invoiceNo":"DEMO-NO-004","invoiceKind":"TRAIN","issuedOn":"2026-06-04","buyer":{"name":"示例制造有限公司","taxNo":"91320594MA1TEST001"},"seller":{"name":"示例铁路客运","taxNo":"91400000MA1DEMO004"},"taxRate":0.09,"totalFen":12000},
+  {"id":"demo-inv-005","type":"EXPENSE","invoiceCode":"DEMO-CODE-005","invoiceNo":"DEMO-NO-005","invoiceKind":"TAXI","issuedOn":"2026-06-05","buyer":{"name":"示例制造有限公司","taxNo":"91320594MA1TEST001"},"seller":{"name":"示例出行有限公司","taxNo":"91400000MA1DEMO005"},"taxRate":0.03,"totalFen":3600}
+]

@@ -1,0 +1,11 @@
+{
+  "M2": {
+    "DEMO-0001": "REJECT",
+    "DEMO-0002": "REJECT",
+    "DEMO-0003": "FLAG",
+    "DEMO-0004": "REJECT",
+    "DEMO-0005": "FLAG",
+    "DEMO-0006": "REJECT"
+  },
+  "M4": {"matched": 1, "unidentified": 1}
+}

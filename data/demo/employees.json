@@ -1,0 +1,8 @@
+[
+  {"id":"demo-e001","name":"测试员工甲","departmentName":"研发部","jobLevel":"STAFF"},
+  {"id":"demo-e002","name":"测试员工乙","departmentName":"销售部","jobLevel":"STAFF"},
+  {"id":"demo-e003","name":"测试员工丙","departmentName":"制造部","jobLevel":"STAFF"},
+  {"id":"demo-e004","name":"测试员工丁","departmentName":"研发部","jobLevel":"STAFF"},
+  {"id":"demo-e005","name":"测试员工戊","departmentName":"管理部","jobLevel":"STAFF"},
+  {"id":"demo-e006","name":"测试员工己","departmentName":"研发部","jobLevel":"STAFF"}
+]

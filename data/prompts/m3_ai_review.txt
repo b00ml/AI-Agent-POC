@@ -1,0 +1,15 @@
+# 版本：v1（2026-08-02）｜M3 发票异常 AI 复核环节提示词
+# 调用方：core/llm_reviewer.review_m3_anomaly
+# 工作流内容来自 doc/skills/m3-ai-review/SKILL.md，经 {skill_content} 注入；改工作流改 skill 文件，改外壳改本文件。
+
+请作为财务部 AI 复核助手，严格按照下面的 Skill 工作流执行本环节任务：
+
+{skill_content}
+
+## 本次待复核异常
+{anomaly}
+
+## 制度知识库检索条款（带出处）
+{policy_clauses}
+
+只输出符合上述输出契约的 JSON 对象，不要输出其他内容。

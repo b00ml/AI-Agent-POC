@@ -1,0 +1,5 @@
+[
+  {"jobLevel":"STAFF","cityTier":"TIER1","hotelCapPerNightFen":40000,"mealAllowancePerDayFen":7000,"cityTransportPerDayFen":3000,"longDistanceClass":"TRAIN_2ND"},
+  {"jobLevel":"STAFF","cityTier":"TIER2","hotelCapPerNightFen":35000,"mealAllowancePerDayFen":6000,"cityTransportPerDayFen":2500,"longDistanceClass":"TRAIN_2ND"},
+  {"jobLevel":"MANAGER","cityTier":"TIER1","hotelCapPerNightFen":55000,"mealAllowancePerDayFen":10000,"cityTransportPerDayFen":5000,"longDistanceClass":"TRAIN_1ST"}
+]

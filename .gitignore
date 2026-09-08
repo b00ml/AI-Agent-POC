@@ -1,0 +1,62 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+.venv/
+venv/
+
+# 环境变量（含 API Key，严禁入库）
+.env
+.env.*
+!.env.example
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# 前端
+node_modules/
+dist/
+pnpm-lock.yaml
+pnpm-workspace.yaml
+
+# 输出产物（运行生成，不入库）
+output/submission.json
+output/reports/
+output/invoices/
+output/attachments/
+output/cache/
+output/runtime/
+output/artifacts/
+output/*.json
+output/*.png
+output/*.html
+output-demo/
+
+# 临时文件
+*.log
+.trae/
+.pytest_cache/
+
+# 大数据/镜像
+*.tar.gz
+*.zip
+*.db
+
+# 公开发布默认排除：原始业务数据和内部制度材料
+# 公开仓库应使用 data/demo/ 下的合成 fixture 替代
+bank/*.csv
+data/source-docs/
+doc/homework/
+
+# 调试、补丁和备份文件不得进入发布提交
+*.backup
+*.patch
+debug_*.py
+fix_*.py
+temp_*.py
+check_*.py
+!tools/public_release_check.py
